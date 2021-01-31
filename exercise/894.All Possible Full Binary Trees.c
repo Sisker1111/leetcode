@@ -34,10 +34,9 @@ struct TreeNode** full_tree(int n, int size){
         return tmp;
     }
     
-    struct TreeNode** root = (struct TreeNode**)malloc(5000 * sizeof(struct TreeNode*));
-    for(int i=0; i<5000; i++)
-        root[i] = NULL;
+    struct TreeNode** root = (struct TreeNode**)calloc(5000, sizeof(struct TreeNode*)); // initaily NULL
     int add = 0;
+    
     
     for(int i=1; i<n-1 ; i++){
         if( i%2 == 0 )
